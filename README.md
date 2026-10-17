@@ -15,7 +15,7 @@ Flags potential compliance issues with supporting evidence
 Workflow
 Product Image → OpenCV → EasyOCR → Information Extraction → Compliance Engine → Audit Result
 
-Tech Stack
+Tech Stack:
 Python
 OpenCV
 EasyOCR
