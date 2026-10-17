@@ -75,3 +75,14 @@ The current prototype demonstrates automated screening of product claims and ing
    ```bash
    streamlit run app4.py
    ```
+
+## 👥 Contributors
+
+This project was developed collaboratively by our team of four.
+
+| Sr. No. | Name | GitHub Profile |
+|---|---|---|
+| 1 | Sanskruti Sonawane | [@ssanskruti17-tech](https://github.com/ssanskruti17-tech) |
+| 2 | Teammate 2 | [@username](https://github.com/username) |
+| 3 | Teammate 3 | [@username](https://github.com/username) |
+| 4 | Teammate 4 | [@username](https://github.com/username) |
