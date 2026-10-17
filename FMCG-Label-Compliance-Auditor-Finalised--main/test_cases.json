@@ -1,0 +1,17 @@
+[
+    {
+        "image": "product_01.jpg",
+        "expected_status": "FLAGGED",
+        "description": "Zero Sugar claim with high sugar"
+    },
+    {
+        "image": "product_02.jpg",
+        "expected_status": "PASS",
+        "description": "Zero Sugar claim with zero sugar"
+    },
+    {
+        "image": "product_03.jpg",
+        "expected_status": "REVIEW",
+        "description": "Unknown claim requiring manual review"
+    }
+]

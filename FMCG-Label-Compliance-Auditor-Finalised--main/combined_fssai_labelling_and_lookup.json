@@ -1,0 +1,824 @@
+{
+  "combined_metadata": {
+    "description": "Combined structured FSSAI data for RAG pipeline ingestion.",
+    "sources": {
+      "02_Cleaned_JSON.json": {
+        "type": "json",
+        "record_count": 20,
+        "cleaning_status": "Already clean (consistent schema, no duplicate ids, no untrimmed whitespace). Note: 3 records (Schedule-I, Schedule-II-1, Schedule-II-2) have an empty content field in the ORIGINAL source file — left as-is, not fabricated or filled in, since inventing content would manipulate the data. Flag these for review/re-extraction from the source PDF if full content is needed."
+      },
+      "fssai_structured.db": {
+        "type": "sqlite",
+        "tables": {
+          "nutrition_thresholds": 17,
+          "claim_synonyms": 22,
+          "restricted_words": 6,
+          "ingredient_synonyms": 8
+        },
+        "record_count": 53,
+        "cleaning_status": "Already clean — checked all 4 tables (nutrition_thresholds, claim_synonyms, restricted_words, ingredient_synonyms) for empty fields, untrimmed whitespace, and duplicate rows. None found. No changes made."
+      }
+    },
+    "total_records": 73,
+    "note": "Records kept exactly as in original sources, tagged with source_dataset (and source_table for the DB). No fields modified, removed, or overlapped/merged between sources."
+  },
+  "records_from_labelling_display_json": [
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "1",
+      "section": "Chapter 1",
+      "title": "Short Title and Commencement",
+      "content": "-(1) These regulations may be called the Food Safety and Standards\n(Labelling and Display) Regulations, 2020.\n(2) These regulations prescribe the labelling requirements of pre-packaged foods and display of essential information\non premises where food is manufactured, processed, served and stored.\n(3) They shall come into force on the date of their publication in the Official Gazette and Food Business Operator\nshall comply with all the provisions of these regulations after one year from the date of their publication in the Official\nGazette except chapter-3 of these regulations, to which Food Business Operator shall comply by 1st January, 2022.",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "2",
+      "section": "Chapter 1",
+      "title": "Definitions",
+      "content": "-(1) In these regulations unless the context otherwise requires: -\n(a)\n“Act” means the Food Safety and Standards Act, 2006 (Act 34 of 2006);\n(b)\n“Assorted pack” means any package or container containing multiple units of different food\nproducts intended and displayed for retail sale and complies with the general labelling requirement\nspecified in regulation 4(8);\n(c)\n“Best before date” means the date which signifies the end of the period under any stated storage\nconditions during which the food product shall remain fully marketable and shall retain any specific\nqualities for which tacit or express claims have been made, and beyond that date, the food may still\nbe perfectly safe to consume, though, its quality may have diminished. However the product shall\nnot be sold if any stage the product become unsafe;\n(d)\n\"Children or child” means a person under the age of 18 years as defined in Juvenile Justice Act,\n2015.\nExplanation- The applicability of the age limit for specific category of food may be indicated in the\nrelevant regulation, under the broad category of children.\n(e)\n“Date of manufacture” means the date on which the food products becomes the product as\ndescribed;\n(f)\n“Date of packaging” means the date on which the food product is placed in the immediate container\nin which it will be ultimately sold;\n(g)\n“e-commerce” means buying and selling of goods and services over digital and electronic\nnetwork.”;\n(h)\n“Foods for catering purposes” means those foods for use in restaurants, canteens, schools,\nhospitals, quick service restaurants (QSR), home delivery operators, caterers and similar institutions\nwhere food is offered for immediate consumption;\n(i)\n“Front of Pack” means part of the package that faces forward (in the principal field of vision) and\nis typically the first thing a consumer will see when they look at the product”\n(j)\n“Infant” means a person not more than twelve months of age;\n(k)\n“Labelling” means any written, printed or graphic matter that is present on the label, accompanies\nthe food or is displayed near the food;\n(l)\n“Lot number” or “code number” or “batch number” means the identification mark depicted\nshown on the label by the use of numeral or alphabet or combinations thereof, brief preceded by\n“Lot number” or “code number” or “batch number” or any unique identification marks such as\nBatch No., B. No., L. No., Lot No., Code, LN, CN or BN, B No by which the food can be traced in\nmanufacture and identified in distribution;\n(m)\n“Multi-unit package” means a package containing two or more individually packaged or labelled\nunits of the same food commodity of identical and / or different, net quantity intended and displayed\nfor retail sale either in individual units or package as a whole and complies with the general\nlabelling requirement specified in regulation 4(8);\n(n)\n“Non-retail containers” means any container that is not intended to be offered for direct sale to the\nconsumer. The food in the non-retail container is for further business activities before being offered\nto the consumer;\n(o)\n\"Non-vegetarian food” means an article of food which contains whole or part of any animal\nincluding birds, insects, fresh water or marine animals or eggs or products of any animal origin, but\ndoes not include milk, milk products, honey or bees wax or carnauba wax or shellac;\n(p)\n“Package/container” means a pre-packed box, bottle, jar, casket, tin, barrel, case, pouch,\nreceptacle, sack, bag, wrapper or such other things in which an article of food is packed;\n(q)\n“Recommended dietary allowances (RDA)”means the average daily dietary nutrient intake level\nsufficient to meet the nutrient requirement of nearly all (97 to 98 per cent.) healthy individuals in a\nparticular life stage and gender group.\n[भागIII—खण् ड 4]\nभारत का रािपत्र : असाधारण\nExplanations.- For the purposes of this clause, RDA values as provided in current Indian Council of\nMedical Research Nutrient Requirements and Recommended Dietary Allowances for Indians shall\nbe applicable and if Indian recommended dietary allowances is not available for any nutrient then\nvalues provided in Codex or World Health Organization guidelines shall be applicable;\n(r)\n“Pre-packaged food” means food, which is placed in a package of any nature, in such a manner\nthat the contents cannot be changed without tampering it and which is ready for sale to the\nconsumer.\nNote: The expression “package” wherever it occurs in these Regulations, shall be construed as\npackage containing prepackaged food articles;\n(s)\n“Principal display panel” means that part of the container/package which is intended or likely to be\ndisplayed or presented or shown or examined by the customer under normal and customary\nconditions of display, sale or purchase of the food article contained therein;\n(t)\n“Retail pack” or “Retail unit” means the packages which are intended for sale to ultimate consumer\nfor the purpose of consumption of the food contained therein;\n(u)\n“Use by” or “expiry” means the date, which signifies the end of the estimated period under any\nstated storage conditions, after which the product may not remain safe and the food product\nprobably will not have the quality of safety attributes normally expected by the consumers and the\nfood, shall not be sold or distributed for human consumption;\n(v)\n“Vegetarian food” means any article of food other than Non-Vegetarian Food as defined in these\nregulations.\n(2) All other words and expressions used herein and not defined, but defined in the Act, rules or regulations\nmade thereunder, shall have the meanings assigned to them in the Act, rules or regulations, respectively.",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "3",
+      "section": "Chapter 1",
+      "title": "Internal mechanism for implementation/interpretation",
+      "content": "to address the problem arising out of implementation/\ninterpretation of the regulations.\nCHAPTER- 2\nLABELLING OF PREPACKAGED FOODS",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "4",
+      "section": "Chapter 2",
+      "title": "General Requirements",
+      "content": "- (1) Every pre-packaged food shall be labeled with information as required under\nthese regulations unless otherwise provided;\n(2) When a food product is sold through e-commerce or any other direct selling means, the mandatory requirements of\nthe label as given in these regulations shall be provided to the consumer through appropriate means before sale except\n‘batch number/ lot number, best before, use by date, expiry date, date of manufacturing/ packing;\n(3) Pre-packaged food shall not be described or presented on any label or in any labelling in a manner that is false,\nmisleading or deceptive or is likely to create an erroneous impression regarding its character in any respect;\n(4) Any information or pictorial device written, printed, or graphic matter may be displayed on the label provided that\nit is not in conflict with the requirements of these regulations;\n(5) The particulars of declaration required under these Regulations to be specified on the label shall be in English or\nHindi in Devnagri script:\nProvided that nothing herein contained shall prevent the use of any other language in addition to the\nlanguage required under this regulation:\nProvided further that the information provided in such other language shall not contradict the information on\nthe label in the English or Hindi;\n(6) Label on pre-packaged foods shall be applied in such a manner that it will not become separated from the\ncontainer;\n(7) Contents on the label shall be clear, unambiguous, prominent, conspicuous, indelible and readily legible by the\nconsumer under normal conditions of purchase and use;\n(8) Where a package is provided with an outside container or wrapper and such container or wrapper is displayed for\nretail sale, it shall also contain all the declarations which are required to appear on the package except where such\ncontainer or wrapper itself is transparent and the declarations on the package(s) are easily readable through such\noutside container or wrapper.\nNote: for the purpose of this clause in case of a transparent multi-unit package containing several retail units the label\nof at least one retail unit containing the declarations required under these regulations shall be visible.",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "5",
+      "section": "Chapter 2",
+      "title": "Labelling Requirements",
+      "content": "-In addition to general requirements specified in Regulation 4, every package shall carry\nthe following information on the label, namely,-\n(1) The Name of Food: Every package of food shall carry name of the food which indicate the true nature of the food\ncontained in the package, on the Front of Pack:\n(a)\nWhere a food is specified by certain essential composition under Food Safety and Standards\nRegulations made under the Act, that establishes its identity the name provided therein shall be\nused;\n(b)\nIn the absence of such name, either a common or usual name or an accompanying description of true\nnature of food shall be used;\n(c)\nIt may additionally have a “coined”, “fanciful”, “brand” or “trade name” subject to compliance of\nFood Safety & Standards (Advertising and Claims) Regulation 2018.\n(2) List of Ingredients: Except for single ingredient foods, a list of ingredients shall be declared on the label in the\nfollowing manner:-\n(a)\nThe list of ingredients shall contain an appropriate title, such as the term “Ingredients/List of\nIngredients”;\n(b)\nThe name of ingredients used in the product shall be listed in descending order of their composition\nby weight or volume, as the case may be at the time of its manufacture;\n(c)\nA food additive carried over into a food in an amount sufficient to perform a technological function\nin that food as a result of the use of raw material or other ingredients in which the additives was used\nshall be included in the list of ingredient;\n(d)\nA specific name shall be used for ingredients in the list of ingredients:\nProvided that for ingredients falling in the respective classes, the following class titles may\nbe used, namely: -\nSl.\nNo.\nName of the classes\nClass title\nEdible vegetable oil\nGive name of the specific edible oil such as\nmustard oil, groundnut oil, etc.\nEdible vegetable fat\nGive type of vegetable fat (interesterified\nvegetable fat, fractionated fat, hydrogenated oils,\npartially hydrogenated oils, margarine and fat\nspreads, such as mixed fat spreads, vegetable fat\nspreads)\nAnimal fat / oil other than milk fat\nGive name of the source of fat, pork fat, lard and\nbeef fat or extract thereof shall be declared by\nspecific means.\nStarches, other than chemically modified starches\nStarch\nAll species of fish where the fish constitutes an\ningredient of another food and provided that the\nlabelling and presentation of such food does not refer to\na species of fish\nFish\nAll types of meat where such meat constitutes an\ningredient of another food and provided that the\nlabelling and presentation of such a food does not refer\nto a specific type of meat\nGive name of the source of meat\nAll types of cheese where cheese or mixture of cheese\nconstitute an ingredient of another food and provided\nthat the labelling and presentation of such a food does\nnot refer to a specific type of cheese\nCheese\nAll spices, herbs and condiments and their extracts\nSpice\nand\ncondiments,\nherbs\nor\nmixed\nspices/condiments as appropriate\nAll types of gum or preparations used in the\nmanufacture of gum base for chewing gum and bubble\ngum\nGum base\n[भागIII—खण् ड 4]\nभारत का रािपत्र : असाधारण\nSl.\nNo.\nName of the classes\nClass title\nAnhydrous dextrose and dextrose monohydrate\nDextrose or Glucose\nSucrose\nSugar\nAll types of caseinates\nCaseinates\nPress, expeller or refined cocoa butter\nCocoa butter\nAll crystallized fruits/vegetables\nCrystallized fruit/vegetable\nAll milk and milk products derived solely from milk\nMilk solids (source may also be given)\nCocoa bean, Cocoa nib, Cocoa mass, Cocoa press\ncakes, Cocoa powder (Fine/dust)\nCocoa solids\nAll vitamin(s) and their compounds\nVitamin(s)\nAll\nminerals\nand\ntrace\nelements\nand\ntheir\ncompounds/salts\nMineral (s) and/or trace element(s)\n(e) Where an ingredient is itself the product of two or more ingredients, such a compound ingredient shall be\ndeclared, by their specific names;\n(i) as such, in the list of ingredients, provided that it is immediately accompanied by a list, in brackets,\nof its ingredients in descending order of proportion (m/m)at the time of manufacture of such compound\ningredients:\nor\n(ii) by declaring all of the ingredients of compound ingredient as if they were individual ingredients of\nthe final food:\nProvided that where a compound ingredient constitutes less than 5 per cent. of the food, the ingredients,\nother than food additives that serve the technological function in the food products, need not be declared;\n(f) Added water shall be declared in the list of ingredients except in cases where water forms part of an\ningredient, such as, brine, syrup or broth, used in the compound food and so declared in the list of ingredients:\nProvided that water or other volatile ingredients evaporated in the course of manufacture need not be declared;\nProvided further that in case of dehydrated or condensed food, which are intended to be reconstituted by\naddition of water, the ingredients in such reconstituted food shall be declared in descending order of weight or\nvolume as the case may be, and shall contain a statement such as “Ingredients of the product when prepared in\naccordance with the directions on the label”;\n(g) The ingoing percentage of an ingredient (including compound ingredients or categories of ingredients), by\nweight or volume as appropriate, at the time of manufacture, shall be disclosed for foods sold as a mixture or\ncombination where the ingredient:\n(i)\nis emphasized as present on the label through words or pictures or graphics; or\n(ii) is not within the name of the food but, is essential to characterise the food and is expected to be\npresent in the food by consumers, and if the omission of the quantitative ingredient declaration will\nmislead or deceive the consumer:\nProvided that such disclosures are not required where -\n(i) the ingredients are used as flavouring agents including spices or condiments\nor herbs or their extracts or mixed masalas or seasonings;\n(ii) a reference in the name of food to an ingredient or category of ingredients, if\nthat reference would not mislead or deceive or would not be likely to create an\nerroneous impression to the consumer regarding the character of the food\nbecause the variation in quantity of ingredient(s) between products is not\nnecessary to characterize the food or distinguish it from similar foods;\n(iii) the drained net weight is indicated on the label as required, except in case\nof mixed ingredients products where certain ingredient(s) is/are emphasized.;\n(iv) specific provisions are stipulated under these regulations for a food;\n(v) a pictorial representation of a serving suggestion is made for consumer\ninformation and use.\n(vi) Added Micro-Nutrients and their preparations like vitamins, minerals,\namino acids that are subject to a nutrition declaration as per requirements\nspecified in regulation 5 (3).\n(3) Nutritional information.-\n(a)\nFor the purposes of these regulations, nutritional information is a description intended to inform the\nconsumer of nutritional properties of the food and the following definitions shall be applicable:\n(i)\n‘sugars’ means all monosaccharides (glucose, fructose, etc.) and disaccharides (maltose, sucrose,\nlactose, etc.).\n(ii) ‘added sugars’means monosaccharides and disaccharides added to foods and beverages\n(iii) ‘fat’ means total lipids including saturated fat, monounsaturated fat, polyunsaturated fat and trans\nfat.\n(A) ‘Saturated fats’ means fatty acids without double bonds.\n(B) ‘Monounsaturated fats’ means fatty acids with one cis double bond.\n(C) ‘Polyunsaturated fats’ means fatty acids with cis-cis methylene interrupted double bonds.\n(D) ‘Trans fat’ means all the geometrical isomers of monounsaturated and polyunsaturated fatty\nacids having non-conjugated, interrupted by at least one methylene group, carbon-carbon\ndouble bonds in the trans configuration.\n(iv) “dietary fiber” means carbohydrate polymers with a degree of polymerization (DP) not lower\nthan three, which are not hydrolysed by the endogenous enzymes in the small intestine of\nhumansand the same consists of one or more of-\n(A) Edible carbohydrate polymers naturally occurring in the food as consumed;\n(B) Carbohydrate polymers, which have been obtained from food raw material by physical,\nenzymatic or chemical means;\n(C) Synthetic carbohydrate polymers.\n(v) ‘nutrient’ means a constituent of food, which:\n(A) provides energy ; or\n(B) has specific metabolic or physiological functions; or\n(C) is needed for growth and development and maintenance of healthy life;\n(b) Nutritional Information per 100g or 100ml or per single consumption pack of the product and per serve\npercentage (%) contribution to Recommended Dietary Allowance calculated on the basis of 2000kcal energy,\n67 g total fat, 22 g saturated fat, 2 g trans fat, 50 g added sugar and 2000 mg of sodium (5 g salt) requirement\nfor average adult per day, shall be given on the label containing the following: —\n(i) energy value (kcal);\n(ii) the amounts of\n(A) Protein (g);\n(B) Carbohydrate (g) and Total Sugars (g), added sugars (g);\n(C) Total fat (g), saturated fat (g), trans fat (other than naturally occurring trans fat)(g)and\ncholesterol (mg);\nProvided that the content of saturated fat and trans fat may be declared on the label as “not more\nthan”.\nProvided that saturated fat and trans fat to be given only if fat content is more than 0.5%\n(D) Sodium (mg);\n(iii) Wherever, numerical information on vitamins and minerals is declared, it shall be expressed in\nmetric units;\n(iv) Nutrition information panel shall include the amount of food in gram (g) or millilitre (ml) for\nreference beside the serving measure and the number of servings in the package.\n[भागIII—खण् ड 4]\nभारत का रािपत्र : असाधारण\nExplanation: “serving or serve size” means an amount of food customarily consumed per eating\noccasion or as defined on the label which is expressed in metric unit. Additionally, it may also be given\nin common household measures like tea spoon, table spoon, cup that is appropriate to the food.\nProvided that the food claimed to be enriched with nutrients, such as, minerals, proteins,\nvitamins, amino acids or enzymes shall give the quantities of such added nutrients on the label.\n(c)\nThe following foods are exempted from mandatory nutritional labelling:\n(i)\nUnprocessed products that comprise a single ingredient;\n(ii)\nProcessed products which the only processing they have been subjected to is maturing\nand that comprise a single ingredient;\n(iii)\nWaters intended for human consumption, including those where the only added\ningredients are carbon dioxide;\n(iv)\nA herb, a spice or mixtures thereof/Curry Powder except Sprinkler masala (masalas meant\nfor direct consumption);\n(v)\nSalt and salt substitutes;\n(vi)\nTable top sweeteners;\n(vii) Coffee extracts and chicory extracts, whole or milled coffee beans and whole or milled\ndecaffeinated coffee beans, coffee, decaffeinated coffee, soluble coffee powder, coffee\nchicory mixture;\n(viii) Herbal and fruit infusions, tea, decaffeinated tea, instant or soluble tea or tea extract,\ndecaffeinated instant or soluble tea or tea extract, which do not contain other added\ningredients than flavourings which do not modify the nutritional value of the tea;\n(ix)\nFermented vinegars and substitutes for vinegar, including those where the only added\ningredients are flavourings;\n(x)\nFlavourings, Food additives, Processing aids, Food enzymes, Gelatine, Yeast;\n(xi)\nChewing-gums;\n(xii) Alcoholic Beverages.\n(xiii) Foods for Special Dietary Uses (FSDU), Foods for Special Medical Purposes(FSMP),\nsubject to the compliance of requirements specified in the Food Safety and Standards\n(Health Supplements, Nutraceuticals, Food for Special Dietary Use, Food for Special\nMedical Purpose, Functional Food and Novel Food) Regulations, 2016.\nProvided that every package of edible oils, interesterified vegetable fat, both hydrogenated or\npartially hydrogenated oils, edible fats, margarine and fat spreads (mixed fat spread and vegetable fat spread)\nand package of food in which fats, oils and fat emulsions is used as an ingredient shall declare the quantity of\ntrans fat content and saturated fat content on the label.\nProvided that the content of saturated fat and trans fat may be declared on the label as “not more\nthan”.\nProvided further that every package of edible oils, interesterified vegetable fat, both hydrogenated or\npartially hydrogenated oils, edible fats, margarine and fat spreads (mixed fat spread and vegetable fat spread)\nshall declare the quantity of monounsaturated fatty, polyunsaturated fatty acid, omega-3 fatty acid and omega-6\nfatty acid content on the label.\nHowever, nutritional information shall be required in the above-mentioned products if a nutrition or\nhealth claim is made on the label.\n(d) The compliance to quantity of declared nutrients on the label shall have the tolerance of maximum minus 10\npercent of the value for that nutrient declared on the label at any point in time within declared shelf life of the\nproduct.\n(e)\nCalculation of Nutrients:\n(i)\nCalculation of Energy: The amount of energy to be listed should be calculated by using the\nfollowing conversion factors:\n(A) Carbohydrates\n4 kcal/g\n(B) Polyols except Erythritol\n2 kcal/g\n(C) Erythritol\n0kcal/g\n(D) Protein\n4 kcal/g\n(E) Fat\n9 kcal/g\n(F) Alcohol (Ethanol)\n7 kcal/g\n(G) Organic acid\n3 kcal/g\n(H)Dietary fibre\n2kcal/g\n(ii) Calculation of Protein - The amount of protein to be listed should be calculated using the formula:\nProtein = Total Kjeldahl Nitrogen x 6.25 (Unless a different factor scientifically justified, may be\nused)\nProvided that for calculating protein content in milk a conversion factor of 6.38 needs to be used.\n(f) Nutritional information may additionally be provided in the form of Barcode/Global Trade Identification\nNumber (GTIN).\n(4) Declaration regarding Veg or Non veg.-\n(a)\nEvery package of Non-Vegetarian Food containing ingredients including food additives, processing aids of\nanimal origin shall bear a declaration to this effect made by a symbol and colour code as stipulated below.\nThe symbol shall consist of a brown colour filled triangle inside a square with brown outline having the sides\nnot less than the minimum size specified in the Table mentioned in the regulation 5 (4) (c), as indicated\nbelow:\nBrown colour\nProvided where any article of food contains egg only as Non-Vegetarian ingredient, the\nmanufacturer, or packer or seller may give declaration to this effect in addition to the said symbol.\n(b) Every package of Vegetarian Food containing ingredients including food additives, processing aids of plant\norigin shall bear a declaration to this effect by a symbol and colour code as stipulated below. The symbol\nshall consist of a green colour filled circle inside a square with green outline having the diameter not less\nthan the minimum size specified in the Table mentioned in the regulation 5 (4) (c), as indicated below:\nGreen colour\n(c) Size of the Vegetarian/Non-vegetarian logo:\nSI.\nNo.\nArea of principal\ndisplay panel in cm.\nsquare\nMinimum size of\ndiameters of circle\nin mm\nMinimum size of\neach side of\ntriangle in mm\nMinimum size of\neach side of\nsquare in mm\n1.\nUpto 100\n2.5\n2.\nAbove 100 to 500\n3.5\n3.\nAbove 500 to 2500\n5\n4.\nAbove 2500\n7\n(d) Declaration regarding Veg. or Non-Veg shall also be prominently displayed as provided in this regulation on\nthe pamphlets, leaflets and advertisements in any media.\nThe symbol shall be prominently displayed on the package having contrast background on principal display\npanel, just close in proximity to the name or brand name of the producton front of pack.\n[भागIII—खण् ड 4]\nभारत का रािपत्र : असाधारण\nProvisions of regulations 5(4)(a) and 5(4)(b) shall not apply in respect of mineral water, packaged\ndrinking water, carbonated water, alcoholic beverages, liquid milk, milk powders and honey.\n(5) Declaration regarding Food Additives.-\nFunctional classes for food additives shall be declared together with the specific name(s) or recognized International\nNumbering System (INS) as specified in Food Safety and Standards (Food Product Standards and Food Additives)\nRegulations, 2011 in the list of the ingredients;\n(a)\nEvery food to which a flavouring agent is added in accordance with the Regulation 3.3.1(1) of Food Safety\nand Standards (Food Product Standards and Food Additives) Regulations, 2011, it shall be declared in the list\nof ingredients provided that:\ni)\nIn case of artificial flavoring substances the common name of the flavor shall be declared;\nii) In case of natural flavoring substances or nature identical substances the class name of flavors shall\nbe declared.\n(6) Declaration of name and complete address.-\n(a)\nThe name and complete address of the brand owner, whether or not, he himself is the manufacturer,\nmarketer, packer or bottler, as the case may be, shall be declared on the label. Such name and address shall be\npreceded by the qualifying words “Manufactured by (Mfg by, Mfd by)” or “Marketed by (Mkt by)” or\n“Manufactured & Marketed by” or “Packed & Marketed by” as the case may be.\nIn case of alcoholic beverages ,“Bottled by” or “Blended and Bottled by “or “Imported and Bottled by”. Or\n“distilled and bottled by” may also be declared on label.\n(b) Where an article of food is imported into India, the package of food shall also carry the name and complete\naddress of the importer in India.\nProvided further that where any food article manufactured outside India is packaged or bottled in\nIndia, the package containing such food article shall also bear on the label, the name of the country of origin\nof the food article and the name and complete address of the importer and the premises of packing or bottling\nin India.\n(7)FSSAI logo and license number.-\n(a)\nThe FSSAI logo and license number under the Act shall be displayed on the label of the food package in\ncontrast color to the background as below:\nLic. No. XXXXXXXXXXXXXX\n(b) The FSSAI logo and license number of the brand owner shall be displayed on the label. In addition, the\nlicense number of the manufacturer or marketer or packer or bottler, as the case may be, if different from the\nbrand owner, shall also be displayed on the label.\n(c)\nIn case of imported food products, the importer shall display FSSAI logo and license number along with\nname and address of importer.\n(d) Every food business operator shall display on all its premises, where food is stored, processed, distributed or\nsold, the Registration/Licence No. as the case may be or Food Safety Display Board if specified, along with\nother information as may be specified by the Food Authority from time to timeat a prominent place in the\npremises.\n(e)\nFortified food and organic food shall be marked with the logo as specified in schedule II of these regulations.\nFSSAI may specify logo for any other food as decided from time to time.\n(8) Net quantity, Retail Sale Price and Consumer Care details.-\nDeclaration and manner of declarationof Net quantity, Retail Sale Price and Consumer Care details shall be\nas provided in Legal Metrology Act, 2009 (1 of 2010) and the Rules made there under.\n(9) Lot/Code/Batch identification.-\nA batch number or code number or lot number shall be declared on the label.\n(10) Date Marking.-\n(a)\n“Date of manufacture or packaging” and “Expiry/Use by” shall be declared on the label. However,\nexpression “Best before” may also be used as optional or additional information.\n(b) The manner of declaration of date of manufacture or packaging/Expiry/Use by/Best Before shall be as\nfollows:\n(i) the day, month and year using the DD/MM/YY format for products with a short shelf life of up to 3\nmonths; the month and the year for products with a shelf life of more than three months, shall be\ndeclared in un-coded numerical sequence except that the month shall be indicated by capital letters and\nabbreviations (at least first three letters of the month) may be used.\n(c)\nIn addition to the expiry or Use by, any special conditions for the storage of the food shall be declared on the\nlabel if the validity of the date depends thereon. If required, storage conditions after opening the pack may\nalso be specified.\n(d) Notwithstanding anything contained in this regulation, an indication of the “Expiry” shall not be required for:\n(i)\nFresh fruits and vegetables, including potatoes which have not been peeled, cut or similarly\ntreated;\n(ii)\nAll types of wine;\n(iii)\nAlcoholic beverages containing 10% or more by volume of alcohol;\n(iv)\nVinegar;\n(v)\nSugar boiled confectionery;\n(vi)\nFood grade salt for industrial use;\n(vii) Solid sugars;\n(viii) Chewing gum and bubble gum.\n(e) “Date of manufacture or packaging” and “Expiry /Use by” shall be grouped together and given at one place.\n(f) “Date and time of manufacture” shall be declared on packed meals served in airlines/railways/mobile catering\nunits.\n(11) Labelling of Imported Foods.-\nLabelling requirements for imported products shall be governed by the Food Safety and Standards (Import)\nRegulations, 2017 in addition to the requirement mentioned in these regulations.\n(12) Country of Origin for Imported Foods-\n(a) The country of origin of the food shall be declared on the label of food imported into India.\n(b) When a food undergoes processing in a second country which changes its nature, the country in which the\nprocessing is performed resulting in change in HS Code at the 6 digit level shall be considered to be the county\nof origin for the purposes of labelling.\n(13) Instructions for use.-\n(a) Instructions for use, including reconstitution, where applicable, shall be included on the label, to ensure\nproper utilization of the food or where such food requires directions for reasons for health and safety (e.g.\n‘Refrigerate after opening’).\n(14) Declaration regarding Food allergen:\nThe following foods and ingredients which are known to cause allergy shall be declared separately as\nContains............................ (Name of allergy causing ingredients)\n(i) Cereals containing gluten; i.e., wheat, rye, barley, oats, spelt or their hybridized strains and products of\nthese (To be declared as name of the cereal);\n(ii) Crustacean and their products (To be declared as Crustacean);\n(iii) Milk & Milk products(To be declared as Milk);\n(iv) Eggs and egg products (To be declared as Egg);\n(v) Fish and fish products (To be declared as Fish);\n(vi) Peanuts, tree nuts (e.g. almonds, walnuts, pistachio, cashew nuts) and their products (To be declared as\nNut);\n[भागIII—खण् ड 4]\nभारत का रािपत्र : असाधारण\n(vii) Soybeans and their products (To be declared as Soy);\n(viii)Sulphite in concentrations of 10mg/kg or more (To be declared as sulphite)\nProvided that in case presence of ingredients due to cross contamination which are known to cause\nallergy may be declared separately as May Contains.......................... (Name of allergy causing ingredients).\nProvided further that this declaration is not required in case of oils derived from these ingredients.”\nRaw agricultural commodities are exempted from the allergen labelling requirements.\n(15) Every package of food material sold in retail but which is not meant for human consumption example Pooja\nwater, Ghee for diya, Oil for Pooja etc. shall bear a declaration to this effect by a symbol as stipulated below.\nThe symbol shall consist of a black colour cross inside a square with black outline having the sides of square\nnot less than the minimum size specified in the Table mentioned in the regulation 5 (4) (c), as indicated\nbelow:",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "6",
+      "section": "Chapter 2",
+      "title": "Principal display panel",
+      "content": "- (1) The information required under these regulations shall be given on the principal\ndisplay panel of the package or container and such information may be given in following manner, -\n(a) All information should be grouped together and given at one place.\nOr\n(b) The pre-printed information be grouped together and given in one place and,\nOnline information or those not pre-printed be grouped together in another place.”\n(2) Area of Principal Display Panel-The area of principal display panel shall not be less than:\n(a) In the case of a rectangular package, forty percent of the product of height and width of the panel of such\npackage having the largest area;\n(b) In case of cylindrical or nearly cylindrical, round or nearly round, oval or nearly oval package, forty percent\nof the product of the height and average circumference of such package; or\n(c) In the case of package of any other shape, twenty percent of the total surface area of the package;\n(d) In the case of package having a capacity of ten cubic centimeters or less, the principal display panel may be\ncard or tape affixed firmly to the package and bearing the required information under these regulations.\n(3) The height of any numeral and letter required under these regulations, on the principal display panel shall be as\nshown in table below:\nTABLE I\nSI.\nNo.\nArea of Principal Display Panel\nMinimum Height of numeral and letter\nin mm\nNormal\nCase\nWhen\nBlown,\nformed\nMoulded, or perforated\non container\n1.\nUpto 100 cm2\n2\n2.\nAbove 100 cm2 upto 500 cm2\n4\n3.\nAbove 500 cm2 upto 2500 cm2\n6\n4.\nAbove 2500 cm2\n8\nProvided that the size of numeral and/or letters required for declaration of net weight, retail\nsale price, date of expiry or best before or the use by date (wherever and as applicable) and Consumer care\ndetails on the principal display panel shall be as provided in the Legal Metrology Act, 2009 (1 of\n2010) and the rules made there under.\nThe width of the letter or numeral shall not be less than one-third of its height, but this proviso\nshall not apply in the case of numeral “1” and letters i, I and l.",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        37
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "7",
+      "section": "Chapter 2",
+      "title": "Mandatory Declarations",
+      "content": "-\n(1) Wherever, packaged food contains ingredients and /or additives as stated in",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        38
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "Schedule-I",
+      "section": "Schedule I",
+      "title": "Fortified and certified organic food logos",
+      "content": "",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": []
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "Schedule-II-1",
+      "section": "Schedule II",
+      "title": "Mandatory Declarations",
+      "content": "",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": []
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "9",
+      "section": "Chapter 3",
+      "title": "Display of information in food service establishments",
+      "content": "(1) Food Service Establishments having Central license or outlets at 10 or more locations shall mention the calorific\nvalue (in kcal per serving and serving size) against the food items displayed on the menu cards or boards or booklets.\nAdditionally, reference information on calorie requirements shall also be displayed clearly and prominently as “An\naverage active adult requires 2,000 kcal energy per day, however, calorie needs may vary”.\n[भागIII—खण् ड 4]\nभारत का रािपत्र : असाधारण\n(2) Food Service Establishments shall also mention the information specified below against the food items displayed\non the menu cards or boards:\na) information relating to food allergens as prescribed under sub-regulations 5 (14) of these regulations:\nProvided that the allergens may be depicted by easy to understand symbols.\nb) logo for veg or non-veg;\n(3) These provisions shall not be applicable to the following:\na)\nEvent caterers and Food Service premises that operate for less than 60 days in a calendar year\n(consecutively or non-consecutively).\nb)\nSelf-serve condiments that are free of charge and not listed on the menu.\nc)\nSpecial-order items or modified meals and menu items as per customer’s request.\n(4) Food Service Establishments shall also provide nutritional information as prescribed under sub-regulation 5(3),\nspecific requirements prescribed under the provisions 1.1 (1), (2), (3), 1.4 (3), (4) and 1.7 of schedule-II of these\nregulations, if applicable and information relating to organic food or ingredients, if claimed, for the food items sold by\nthem to consumers upon request in the form of booklets or handouts or on their website.\nProvided that deviation of 25 percent may be tolerated in case of nutritional information declaration.\n(5) E-commerce Food Business Operators shall get the above mentioned information from respective Food Business\nOperators and provide on their website wherever applicable.\n(6)Nutritional information and/or ingredients information along with health messages shall be displayed where food is\nserved in a manner as may be required and specified by the Food Authority.\n(7) The Authority may specify other food service establishments also to comply with the requirements specified in\nthese regulations from time to time.\nCHAPTER 4",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        38
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "10",
+      "section": "Chapter 4",
+      "title": "Labelling Requirements of non-retail container",
+      "content": "(1) Every packaged food meant for non-retail sale shall provide the following mandatory information either on\nthe container or pasted on the label thereto:\n(a) Name of the food;\n(b) Net Quantity;\n(c) FSSAI Logo and License number;\n(d) Date marking;\n(e) Lot No.\n(f) Name and address of the manufacturer or packer (including country of origin for imported\npackages)\n(2) The following information if not provided on the label shall be provided in the accompanying documents:\n(a) List of ingredient\n(b) Declaration regarding Veg or Non-Veg\n(c)Nutritional information\n(3) The following labelling requirements are exempted if they are provided in a Barcode/Global Trade\nIdentification Number (GTIN);-\n(a) Address of the brand owner whether or not, he himself is the manufacturer, marketer, packer or\nbottler, as the case may be,\n(b) the license number of the manufacturer or marketer or packer or bottler, as the case may be, if\ndifferent from the brand owner.\n(4) Every package meant for non- retail sale shall bear a statement “NOT FOR RETAIL SALE”.\nCHAPTER 5\nLABELLING OF FOOD ADDITIVES WHEN SOLD AS SUCH",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        39
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "11",
+      "section": "Chapter 5",
+      "title": "Labelling of packaged Food Additives for Retail Sale",
+      "content": "(1) Every package of a food additive meant for retail sale to the consumer shall be labelled in accordance with the\nFood Safety and Standards (Labelling and Display) Regulations, 2020 except for sub-regulation 5(1) and 5(3) of\nthis regulation.\n(2) Additionally the label of every package of food additive shall provide the following information under these\nregulations:\n(a) Name of Food Additive.- The specific name as mentioned in Food Safety and Standards (Food Products\nStandards and Food Additives) Regulations, 2011 and amendments thereof shall be used.\nProvided that:\n(i)\nWhere such a name is not listed in the aforementioned clause the name established in international\nregulations shall be used or\n(ii)\nIn other cases the common or commercial name shall be used\n(iii)\nIn the case of synthetic food colours the chemical name and the colour index of the dye stuff.\n(iv)\nIf two or more food additives are present in the package, their names shall be listed in the descending\norder of their composition by weight or volume. Where one or more of the food additives is subject to\na quantitative limitation in a food covered by Food Safety and Standards (Food Products Standards\nand Food Additives) Regulations 2011, and amendments thereof, the quantity or proportion of that\nadditive shall be stated. If food ingredients are part of the preparation, they shall be declared in the list\nof ingredients in descending order of proportion by weight.\n(b) Other Mandatory Declarations:\n(i)\nEvery package of a food additive sold in retail or non-retail sale shall be marked prominently with the\nwords “FOR USE IN FOOD”.\n(ii)\nIn the case of mixtures of flavourings, the name of each flavouring present in the mixture need not be\ngiven but a common or generic expression “flavour” or “flavouring” may be used, together with a true\nindication of the nature of the flavour.\nThe expression “flavour” or “flavouring” shall be qualified by the words “natural”, nature-identical”,\n“artificial”, or a combination of these words, as appropriate. Provided that this qualifier does not apply to\nflavour modifiers.",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        40
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "12",
+      "section": "Chapter 5",
+      "title": "Labelling of Pre-packaged Food Additives Sold other than by Retail",
+      "content": "Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter\n4 and regulation 10 of these regulations except the clause 10(2) (c).",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        40
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "13",
+      "section": "Chapter 5",
+      "title": "Supersession provision",
+      "content": ", if repugnant to labelling requirement prescribed in any\nregulations made under the Food Safety and Standards Act, 2006 (34 of 2006).\n[भागIII—खण् ड 4]\nभारत का रािपत्र : असाधारण\nSchedule-I\n(See regulation 5 (7) (e))\n(1) Every package of fortified food shall carry the words “fortified with ………… (name of the fortificant)”\nand the logo, as specified below, on the label. It may also carry a tag line “Sampoorna Poshan Swasth Jeevan”\nunder the logo.\nFortified with….\nSAMPOORNA POSHAN\nSWASTHA JEEVAN\n….  \n(2) Every package of certified organic food as per Food Safety and Standards (Organic Foods) Regulations,\n2017 shall carry the logo as specified below:\nSchedule-II\n(See regulations 7 (1), 8(4) (a) and 9(4))\n1. Mandatory Declarations:\n(1) Every package of food containing the following ingredients/additives shall bear the following declarations on the\nlabel in a rectangular box, namely,-\nSI. No.\nIngredients/additives\nDeclarations\n1.\n10% or more polyols\nPolyols may have laxative effect\n2.\n10% or more polydextrose\nPolydextrose may have laxative effect\n[भागIII—खण् ड 4]\nभारत का रािपत्र : असाधारण\n3.\nAdded caffeine\nCONTAINS CAFFEINE\nProvided if caffeine is added in the products, the\nquantity of the added caffeine (in ppm) shall also be\ndeclared in the list of ingredients.\n4.\nIsomaltulose\nContains Isomaltulose-----(kcal) per 100gm or\n100ml\n(2) Every package containing the following articles of food shall bear the following declarations on the label in a\nrectangular box, namely, -\nSI. No.\nArticles of food\nDeclarations\n1.\nMaida treated with improver or bleaching\nagents\nREFINEDWHEAT FLOUR (MAIDA)TREATED\nWITH IMPROVER/BLEACHING AGENTS, TO\nBE USED BY BAKERIES ONLY\n2.\nDried Glucose Syrup containing sulphur\ndioxide exceeding 40 ppm\nDRIED GLUCOSE SYRUP FOR USE IN SUGAR\nCONFECTIONERY ONLY\n3.\nFruit squash by whatever name it is sold,\ncontaining additional sodium or potassium\nsalt\nCONTAINS\nADDITIONAL\nSODIUM/POTASSIUM SALT\n4.\nFlavour emulsion and flavour paste meant\nfor use in carbonated or non-carbonated\nbeverages\nFLAVOUR EMULSION AND FLAVOUR PASTE\nFOR USE IN CARBONATED OR NON-\nCARBONATED BEVERAGES ONLY\n5.\nCheese(s), if coated/packed in food grade\nwaxes\nCOATED WAX TO BE REMOVED BEFORE\nCONSUMPTION\n6.\nFrozen Desert/Frozen Confection\nFrozen Desserts/Frozen Confection is made with\n_______________Edible\nVegetable\nOil*/and\nVegetable Fat*\n7.\nCommon Salt\nCOMMON SALT FOR IODISATION*/ IRON\nFORTIFICATION*/ANIMAL\nUSE*/\nPRESERVATION NOT MEANT FOR DIRECT\nCONSUMPTION*/INFANT\nFOOD\nPRODUCTS*/MEDICINE*/INDUSTRIAL USE*\n8.\nFresh fruit if coated with wax\nCOATED WITH WAX (give name of wax)\n9.\nGelatin meant for human consumption\nGelatin Food Grade\n* Strike out whatever is not applicable.\n(3) Every package containing the following articles of food and advertisement relating thereto shall carry the warning\nand/or declaration, in a rectangular box, namely, -\nSI. No.\nArticles of food\nDeclarations\n1.\nPan Masala\nCHEWING OF PAN MASALA IS INJURIOUS\nTO HEALTH\n2.\nSupari\nCHEWING OF SUPARI IS INJURIOUS TO\nHEALTH\n3.\nAspartame\n(Methyl\nester),\nAcesulfame\nPotassium, Sucralose and Saccharin Sodium,\nNeotame\nmarketed\nas\n“Table\nTop\nSweetener”\n(I) CONTAINS........... (NAME OF ARTIFICIAL\nSWEETENER)\n(II) NOT RECOMMENDED FOR CHILDREN\n4.\nAspartame (Methyl ester), marketed as\n“Table Top Sweetener”\n“NOT FOR PHENYLKETONURICS”\n(4) Every package of food containing the following ingredients/additives and advertisement relating thereto shall carry\nthe following warning and declaration, in a rectangular box, namely,-\nSI. No.\nIngredients/additives\nDeclarations\n1.\nArtificial/non-nutritive\nsweeteners\nmentioned in Food Safety and standards\n(Food\nProducts\nstandards\nand\nFood\nAdditive) Regulations, 2011\n(i)\nThis\ncontains.................(Name\nof\nthe\nartificial/non-nutritive sweeteners).\n(ii)NOT RECOMMENDED FOR CHILDREN.\n(iii) * NOT FOR PHENYLKETONURICS”(if\nAspartame is added)\n2.\nMixture of Aspartame (Methyl Ester) and\nAcesulfame\nPotassium\nSweeteners\nmentioned in Food Safety and standards\n(Food\nProducts\nstandards\nand\nFood\nAdditive) Regulations, 2011\n(i) This.....(name of food) contains........... and\nadmixture of Aspartame (Methyl Ester and\nAcesulfame Potassium).\n(ii)NOT RECOMMENDED FOR CHILDREN\n(iii) *NOT FOR PHENYLKETONURICS”(if\nAspartame is added)\n3.\nEvery package of food which is permitted to\ncontain artificial sweetener mentioned in\nFood Safety and Standards (Food Products\nstandards and Food Additive) Regulations,\nCONTAINS ARTIFICIAL SWEETENER AND\nFOR CALORIE CONCIOUS\n4.\nMonosodium Glutamate\nThis package of (name of the food) ...............\ncontains added MONOSODIUM GLUTAMATE\nNOT RECOMMENDED FOR INFANTS BELOW\n-12 MONTHS AND PREGNANT WOMEN\n* Strike out whatever is not applicable.\n[भागIII—खण् ड 4]\nभारत का रािपत्र : असाधारण\n(5)Every container of refined vegetable oil shall bear the following label, namely,—\n(6) One time usable plastic bottles of packaged drinking water and mineral water shall carry the following declaration.\nOR\n(7) Every package of fat spread, milk products, milk based fruit drink, fermented milk products, soy and rice drink,\ncheese products, yoghurt products, spice sauces, salad dressings, juices and nectars containing added plant stanol\nesters shall bear the following label, namely: —\n(8) Every package of biscuits, bread, cakes, breakfast cereals, carbonated water, thermally processed fruits, fruit\njuices, fruit nectars, fruit beverages, fruit squashes, jam, jelly, fruit cheese, marmalade, dairy based drinks, milk\npowder, carbohydrate- based and milk product based sweets like gulabjamun, rosogolla, peda, khoya burfi, macroni\nproducts, noodles, pasta, sweets and confectionery, candies and icings, savories and snacks wherever the trehalose is\nadded shall bear the following label, namely:—\n(9) Every package of flakes and ready to eat dry breakfast cereals, noodles, pasta, salad dressings or toppings and\nspreads; table top fibre as filler or carrier, cereals and other snack food or savouries and bakery products including\nbiscuits, cookies, bread, cake mix and pastries and other products where dextrin is allowed under Food Safety and\nstandards (Food Products standards and Food Additive) Regulations, 2011, containing added Dietary Fibre (Dextrin-\nsoluble fibre), shall bear the following declarations, namely:-\n\nContains Plant Stanol Esters (as Plant Stanols )---gm/100 gm or 100ml.\n\nPatients on cholesterol lowering medication should use the product under medicalsupervision.\n\nMay not be nutritionally appropriate for pregnant and lactating women and childrenunder the age\nof five years.\n\nCONSUMPTION OF MORE THAN 3g. PER DAY, TOTAL OF STEROL,STANOLS OR\nCOMBINATION THEREFOF SHALL BE AVOIDED.\nContains Trehalose\nContains Dietary Fibre (Dextrin) ----- (Source of soluble Dietary Fibre)\nCRUSH THE BOTTLE AFTER USE\nDISPOSE THE BOTTLE RESPONSIBLY\nRefined (name of the Oil) Oil\n(1) Fat spread, milk products, milk based fruit drink, fermented milk products, soy and rice drinks, cheese\nproducts, yoghurt products, spice sauces, salad dressings, juices and nectars, edible oils, and bakery products\ncontaining added plant sterol shall contain the following declarations, namely: -\n(11)(a) The label of a food, which has been treated with ionizing radiation, shall carry a written statement indicating\nthe treatment in close proximity to the name of the food.\n(b) Any food that has undergone the process of irradiation provided under regulation 2.13 of Food Safety and\nStandards (Food Products Standards and Food Additives) Regulations, 2011, shall bear the Radura logo in\ngreen colour and following declaration on the label, namely: -\nPROCESSED BY RADIATION\nName of the Product:\nPurpose of Radiation Processing:\nOperating License No. :\nBatch Identification No. (BIN) (as provided by facility):\nDate of Processing..................…………”",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        40
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "Schedule-II-2",
+      "section": "Schedule II",
+      "title": "Specific requirements/restrictions on manner of labelling",
+      "content": "",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": []
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "Schedule-II-2.1",
+      "section": "Schedule II",
+      "title": "Labelling of edible oils and fats",
+      "content": "(1) The package, label or the advertisement of edible refined vegetable oils and fats shall not use any exaggerated\nexpressions like “Super-Refined”, “Extra-Refined”, “Micro-Refined”, “Double refined,”, Ultra-Refined”.\n(2) Every package of vanaspati made from more than 30 percent of Rice bran oil shall bear the following label,\nnamely: -\n‘This package of vanaspati is made from more than\n30 per cent Rice bran oil by weight”\n(3) A package containing annatto colour in vegetable oils shall bear the following label namely:—\nContains Annatto colour\n\nContains Plant Sterol (as Phytosterols) ---g/100g or 100ml.\n\nPatients on cholesterol lowering medication should use the productunder medical\nsupervision\n\nMay not be nutritionally appropriate for pregnant and lactating womenand children\nunder the age of five years.\n\nCONSUMPTION OF MORE THAN 3g/DAY,TOTAL OF STEROL,STANOLS,\nOR COMBINATION THEREOF, SHOULD BE AVOIDED\n[भागIII—खण् ड 4]\nभारत का रािपत्र : असाधारण\n(4) Every package containing an admixture of edible oils shall carry the following label declaration\nimmediately below its brand name/trade name on front of pack, namely:-\n(*i.e. in raw or refined form)\nThe font size of the label declaration “Multi-Sourced Edible Vegetable Oils” shall not be less than 5 mm and\nfor label declaration “Name and nature of edible vegetable oil…..% by weight”, font size shall not be less\nthan 3mm:\nProvided that the font size of the label declaration shall not be less than 10mm in case the net quantity of the\nedible oil contained in the packages is 5 litre and above.\nThere shall also be the following declaration in bold capital letters along with the name of product on\nfront/central panel,-",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        46
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "Schedule-II-2.2",
+      "section": "Schedule II",
+      "title": "Coffee-Chicory Mixture",
+      "content": "(1) Every package containing a mixture of coffee and chicory shall have affixed to it a label upon which shall be\nprinted the following declaration:\nCoffee blended with Chicory\nThis mixture contains\nCoffee…………………………… Percent\nChicory………………………….. Percent\n(2) Every package containing Instant Coffee-Chicory mixture shall have affixed to it a label upon which shall be\nprinted the following declarations:\nInstant Coffee-Chicory mixture made from blends of coffee and chicory\nCoffee…………………………… Percent\nChicory………………………….. Percent",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        47
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "Schedule-II-2.3",
+      "section": "Schedule II",
+      "title": "Labelling of Milk and Milk products",
+      "content": "All Milk powders, skimmed milk powders and condensed milk (sweetened and flavoured) or similar products,\nwhich can be reconstituted into liquid milk, shall carry the following declaration on label:\nNOT TO BE USEDFOR INFANTS BELOW SIX MONTHS",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        47
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "Schedule-II-2.4",
+      "section": "Schedule II",
+      "title": "Labelling prohibitions for drinking water",
+      "content": "(both packaged and mineral)\n(1) No claims concerning medicinal (preventative, alleviative or curative) effects shall be made in respect of the\nproperties of the product covered by the standard. Claims of other beneficial effects related to the health of\nthe consumer shall not be made.\nMulti-Sourced Edible Vegetable Oils\n(Name and nature* of edible vegetable oil) ……………………..% by weight\n(Name and nature* of edible vegetable oil)………………………% by weight\nNOT TO BE SOLD LOOSE\n(2) The name of the locality, hamlet or specified place may not form part of the trade name unless it refers to\npackaged water collected at the place designated by that trade name.\n(3) The use of any statement or of any pictorial device which may create confusion in the mind of the public or\nin any way mislead the public about the nature, origin, composition, and properties of such waters put on sale\nis prohibited.",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        47
+      ]
+    },
+    {
+      "source_dataset": "02_Cleaned_JSON.json",
+      "dataset_name": "FSSAI Labelling and Display Regulations 2020",
+      "source_title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "authority": "Food Safety and Standards Authority of India",
+      "notification_date_dataset": "2020-11-17",
+      "gazette_date_dataset": "2020-11-18",
+      "supersedes": "Food Safety and Standards (Packaging and Labelling) Regulations, 2011",
+      "id": "Schedule-II-2.5",
+      "section": "Schedule II",
+      "title": "Labelling of Gluten Free products",
+      "content": "(1) The term \"Gluten Free\" shall be printed in the immediate proximity of the name of the product in the case of\nproducts described in regulation 2.14 of the Food Safety and Standards (Food Products Standards and Food\nAdditives) Regulations, 2011, namely:-\nIn case any gluten free product is manufactured in a plant where gluten containing products are also\nmanufactured this shall be declared on the label as “Processed in a plant where gluten containing products are\nmanufactured”",
+      "source": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+      "notification_date": "2020-11-17",
+      "source_pages": [
+        48
+      ]
+    }
+  ],
+  "records_from_structured_db": {
+    "nutrition_thresholds": [
+      {
+        "id": 1,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Energy/Calorie",
+        "claim_type": "Low",
+        "condition_raw": "Not more than 40 kcal# per 100 g for solids 20 kcal per 100 ml for liquids.",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 2,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Fat",
+        "claim_type": "Low",
+        "condition_raw": "Not more than 3 g of fat per 100 g for solids or 1.5 g of fat per 100ml for liquids.",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 3,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Cholesterol",
+        "claim_type": "Low",
+        "condition_raw": "Not more than 20 mg cholesterol per 100 g for solids and 1.5 g saturated fat per 100 g for solids or 10 mg per 100 ml for liquids and 0.75 g of saturated fat per 100 ml for liquids and in either case must provide not more than 10% of energy from saturated fat.",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 4,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Saturated fat",
+        "claim_type": "Low*",
+        "condition_raw": "Not more than 1.5 g per 100 g for solids or 0.75 g per 100 ml for liquids and in either case must provide not more than 10% of energy from saturated fat.",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 5,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Unsaturated fat",
+        "claim_type": "High*",
+        "condition_raw": "At least 70% of the fatty acids present in the product are derive from unsaturated fat under the condition that unsaturated fat provides more than 20% of energy of the product",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 6,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Trans fat",
+        "claim_type": "Free",
+        "condition_raw": "The food contains less than 0.2g trans fat per 100 g or 100ml of food",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 7,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "MUFA",
+        "claim_type": "High in MUFA*",
+        "condition_raw": "Shall only be made where at least 45% of the total fatty acids present in the product are derived from mono unsaturated fat and under the condition that monounsaturated fat provides more than 20% of energy of the product",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 8,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "PUFA",
+        "claim_type": "High in PUFA*",
+        "condition_raw": "Shall only be made where at least 45% of the total fatty acids present in the product are derived from",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 9,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "PUFA",
+        "claim_type": "(3)",
+        "condition_raw": "(4)",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 10,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Omega 3 fatty acids",
+        "claim_type": "Source",
+        "condition_raw": "The product contains: at least 0.3g alpha-linolenic acid per 100 g and per 100kcal, or at least 40 mg of the sum of eicosapentaenoic acid and docosahexaenoic acid per 100g and per 100kcal",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 11,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Sugars",
+        "claim_type": "Low",
+        "condition_raw": "The product contains not more than 5 g of sugars per 100 g for solids or 2.5 g of sugars per 100 ml for liquids.",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 12,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Protein",
+        "claim_type": "Source*",
+        "condition_raw": "10% of RDA per 100 g for solids 5% of RDA per 100 ml for liquids or 5% of RDA per 100 kcal",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 13,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Vitamin(s) and/or Mineral(s)",
+        "claim_type": "Source",
+        "condition_raw": "The food provides at least 15% of RDA of the vitamin/mineral per 100g for solids or 7.5% of RDA of the vitamin/mineral per 100 ml for liquids",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 14,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Sodium",
+        "claim_type": "Low",
+        "condition_raw": "Product contains not more than 0.12 g of sodium per 100 g for solids or 100 ml for liquids.",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 15,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Dietary fibre",
+        "claim_type": "Source",
+        "condition_raw": "Product contains at least 3 g of fibre per 100 g or 1.5 g per 100kcal",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 16,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Probiotics",
+        "claim_type": "Source",
+        "condition_raw": "Product contains ≥108 CFU in the recommended serving size per day",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      },
+      {
+        "id": 17,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "nutrient": "Glycemic index (GI)",
+        "claim_type": "Low GI",
+        "condition_raw": "GI value below 55 A food’s GI indicates the rate at which the carbohydrate in the food is broken down into glucose and absorbed from the gut into the blood and expressed as a per cent of the response to the same amount of carbohydrate from a standard food, white bread",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "nutrition_thresholds"
+      }
+    ],
+    "claim_synonyms": [
+      {
+        "id": 1,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Free",
+        "synonym": "Zero",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 2,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Free",
+        "synonym": "No",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 3,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Free",
+        "synonym": "Without",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 4,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Free",
+        "synonym": "Negligible Source",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 5,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Low",
+        "synonym": "Little",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 6,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Low",
+        "synonym": "few (for",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 7,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Low",
+        "synonym": "calories)",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 8,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Low",
+        "synonym": "contains a small",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 9,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Low",
+        "synonym": "amount of",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 10,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Low",
+        "synonym": "low",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 11,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Low",
+        "synonym": "source of",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 12,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Low",
+        "synonym": "Light",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 13,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Reduced/Less",
+        "synonym": "Lower",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 14,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Reduced/Less",
+        "synonym": "fewer (for",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 15,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Reduced/Less",
+        "synonym": "calories)",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 16,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "High",
+        "synonym": "Higher",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 17,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "High",
+        "synonym": "Increased",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 18,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "High",
+        "synonym": "More",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 19,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "High",
+        "synonym": "Rich",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 20,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "High",
+        "synonym": "Enhanced",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 21,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Source",
+        "synonym": "Provides",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      },
+      {
+        "id": 22,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "claim_category": "Source",
+        "synonym": "Contains",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "claim_synonyms"
+      }
+    ],
+    "restricted_words": [
+      {
+        "id": 1,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "term": "Natural",
+        "condition_raw": "The word may be used to describe: (a) A single food, derived from a recognised source viz., plant, animal, microorganism or mineral and to which nothing has been added and which have been subjected only to such processing which would only render it suitable for human consumption like: (i)smoking without chemicals, cooking processes such as roasting, blanching and dehydration and physical refining; (ii)freezing, concentration, pasteurization, sterilisation and fermentation; and (Iii)packaging done without chemicals and preservatives. (b) Permitted food additives that are obtained from natural sources by appropriate physical processing. (c) Composite foods shall not themselves be described directly or by implication as “natural” but such foods may be described as “made from natural ingredients” if all the ingredients or food additives meet the criteria in (a) and (b) above: Provided that, the above principles shall also apply to use of other words or expressions such as “real”, “genuine”, when used in place of “natural “in such a way as to imply similar benefits. Provided further that the, claims such as “natural goodness”, “naturally better”, “nature’s way” shall not be used.",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "restricted_words"
+      },
+      {
+        "id": 2,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "term": "Fresh",
+        "condition_raw": "(a) The term “fresh” shall only be used on products which have not been processed in any manner except, washed, peeled, chilled, trimmed or cut, irradiated by ionizing radiation not exceeding 1kGy or other processing necessary for making the product safe for consumption without altering its basic characteristics in any manner. If such processing also leads to extension in the shelf-life of the product the term “fresh” shall not be used. (b) The term “fresh” or “freshly” shall have no other connotation than the immediacy of the action being described. A food containing additives or subjected to packaging, storing or any other supply chain processes that control freshness shall not be termed as “freshly stored”, “freshly packed”, etc.: Provided that “Fresh” may be permitted to be used along with “frozen” if it is clear from the context. - “Frozen from fresh” “fresh frozen” “Freshly frozen”– which would indicate that the food was quickly frozen while still fresh.",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "restricted_words"
+      },
+      {
+        "id": 3,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "term": "Pure",
+        "condition_raw": "(a) The term “pure” shall only be used to describe a single ingredient food to which nothing has been added and which is free from avoidable contamination and the levels of unavoidable contaminants shall need to be below the levels prescribed in the Food Safety and Standards (Contaminants, Toxins and Residues) Regulations, 2011 or in any other standard given under Food Safety and Standards Act, Rules and Regulations thereof. (b) Compound foods shall not generally be described, directly or by implication, as “pure” but such foods may be described as “made with pure ingredients” if all the ingredients meet the criteria in (a) above. (c) “Pure” shall not be included in any brand or fancy names, nor in coined or meaningless phrases, in such a way as to imply that a food that does not meet the criteria above is pure or made from pure ingredients.",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "restricted_words"
+      },
+      {
+        "id": 4,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "term": "Authentic, Genuine, Real",
+        "condition_raw": "These terms may be used only if the label or advertisement also clarify in what way the overall quality is tangibly justified and why the particular term has been used.",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "restricted_words"
+      },
+      {
+        "id": 5,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "term": "Traditional",
+        "condition_raw": "The term “traditional” shall demonstrably be used to describe a recipe, fundamental formulation or processing method for a product that has existed for a generation (thirty years), should have been available substantially unchanged, for that same period.",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "restricted_words"
+      },
+      {
+        "id": 6,
+        "regulation_short_code": "FSS-ADV-CLAIMS-2018",
+        "term": "Original",
+        "condition_raw": "(a)The term “original” shall only be used to describe a food that is made to a formulation, the origin of which can be traced, and that has remained essentially unchanged over time. It should not contain replacements for major ingredients. It may similarly be used to describe a process, provided it is the process first used in the making of the food, and which has remained essentially unchanged over time, although it may be mass-produced. (b) To be termed “original”, a product shall not have changed to any material degree and shall remain available as the ’standard’ product when new variants are introduced. A product re-introduced onto the market after a period of absence shall only be described as “original” if it can be shown to meet these criteria.",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "restricted_words"
+      }
+    ],
+    "ingredient_synonyms": [
+      {
+        "id": 1,
+        "raw_ingredient_name": "maltodextrin",
+        "normalized_category": "added_sugar",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "ingredient_synonyms"
+      },
+      {
+        "id": 2,
+        "raw_ingredient_name": "glucose syrup",
+        "normalized_category": "added_sugar",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "ingredient_synonyms"
+      },
+      {
+        "id": 3,
+        "raw_ingredient_name": "high fructose corn syrup",
+        "normalized_category": "added_sugar",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "ingredient_synonyms"
+      },
+      {
+        "id": 4,
+        "raw_ingredient_name": "dextrose",
+        "normalized_category": "added_sugar",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "ingredient_synonyms"
+      },
+      {
+        "id": 5,
+        "raw_ingredient_name": "sucrose",
+        "normalized_category": "added_sugar",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "ingredient_synonyms"
+      },
+      {
+        "id": 6,
+        "raw_ingredient_name": "invert sugar",
+        "normalized_category": "added_sugar",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "ingredient_synonyms"
+      },
+      {
+        "id": 7,
+        "raw_ingredient_name": "monosodium glutamate",
+        "normalized_category": "flavour_enhancer",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "ingredient_synonyms"
+      },
+      {
+        "id": 8,
+        "raw_ingredient_name": "ins 621",
+        "normalized_category": "flavour_enhancer",
+        "source_dataset": "fssai_structured.db",
+        "source_table": "ingredient_synonyms"
+      }
+    ]
+  }
+}

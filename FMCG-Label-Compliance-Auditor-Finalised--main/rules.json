@@ -1,0 +1,134 @@
+{
+  "version": "FSSAI_2026_AMENDMENT_V2",
+  "effective_date": "2026-08-22",
+  "claims": {
+    "CLAIM_SUGAR_FREE": {
+      "claim_id": "CLAIM_SUGAR_FREE",
+      "aliases": ["zero sugar", "sugar free", "0% sugar", "no sugar"],
+      "type": "NUTRIENT_CONTENT",
+      "target_nutrient": "total_sugars_g",
+      "evaluation_mode": "ALL",
+      "conditions": [
+        {"basis": "100g", "operator": "<=", "threshold": 0.5, "unit": "g per 100g"}
+      ],
+      "regulation_ref": "FSSAI Advertising and Claims Regulations, Schedule I"
+    },
+    "CLAIM_NO_ADDED_SUGAR": {
+      "claim_id": "CLAIM_NO_ADDED_SUGAR",
+      "aliases": ["no added sugar", "without added sugar", "zero added sugar"],
+      "type": "NON_ADDITION",
+      "forbidden_ingredients": [
+        "sugar",
+        "sucrose",
+        "glucose",
+        "high fructose corn syrup",
+        "hfcs",
+        "maltodextrin",
+        "maltose",
+        "corn syrup",
+        "honey",
+        "invert sugar",
+        "fruit juice concentrate"
+      ],
+      "required_warning": "contains naturally occurring sugars",
+      "regulation_ref": "FSSAI Advertising and Claims Regulations, Schedule II"
+    },
+    "CLAIM_LOW_SODIUM": {
+      "claim_id": "CLAIM_LOW_SODIUM",
+      "aliases": ["low sodium", "low salt", "reduced sodium"],
+      "type": "NUTRIENT_CONTENT",
+      "target_nutrient": "sodium_mg",
+      "evaluation_mode": "ALL",
+      "conditions": [
+        {"basis": "100g", "operator": "<=", "threshold": 120.0, "unit": "mg per 100g"}
+      ],
+      "regulation_ref": "FSSAI Advertising and Claims Regulations, Schedule I"
+    },
+    "CLAIM_LOW_GI": {
+      "claim_id": "CLAIM_LOW_GI",
+      "aliases": ["low gi"],
+      "type": "NUTRIENT_CONTENT",
+      "target_nutrient": "gi",
+      "evaluation_mode": "ALL",
+      "conditions": [
+        {"basis": "metric", "operator": "<", "threshold": 55.0}
+      ],
+      "regulation_ref": "FSSAI Advertising and Claims Regulations, Schedule I"
+    },
+    "CLAIM_LOW_FAT": {
+      "claim_id": "CLAIM_LOW_FAT",
+      "aliases": ["low fat", "low in fat", "reduced fat"],
+      "type": "NUTRIENT_CONTENT",
+      "target_nutrient": "total_fat_g",
+      "evaluation_mode": "ALL",
+      "conditions": [
+        {"basis": "100g", "operator": "<=", "threshold": 3.0, "unit": "g per 100g"}
+      ],
+      "regulation_ref": "FSSAI Advertising and Claims Regulations, Schedule I"
+    },
+    "CLAIM_TRANS_FAT_FREE": {
+      "claim_id": "CLAIM_TRANS_FAT_FREE",
+      "aliases": ["trans fat free", "zero trans fat", "0g trans fat", "no trans fat"],
+      "type": "NUTRIENT_CONTENT",
+      "target_nutrient": "trans_fat_g",
+      "evaluation_mode": "ALL",
+      "conditions": [
+        {"basis": "100g", "operator": "<=", "threshold": 0.2, "unit": "g per 100g"}
+      ],
+      "regulation_ref": "FSSAI Advertising and Claims Regulations, Schedule I"
+    },
+    "CLAIM_LOW_SATURATED_FAT": {
+      "claim_id": "CLAIM_LOW_SATURATED_FAT",
+      "aliases": ["low saturated fat", "low sat fat", "low in saturated fatty acids"],
+      "type": "NUTRIENT_CONTENT",
+      "target_nutrient": "saturated_fat_g",
+      "evaluation_mode": "ALL",
+      "conditions": [
+        {"basis": "100g", "operator": "<=", "threshold": 1.5},
+        {"basis": "energy_ratio", "nutrient_kcal_multiplier": 9, "operator": "<=", "threshold": 10.0, "unit": "% of total energy"}
+      ],
+      "regulation_ref": "FSSAI Advertising and Claims Regulations, Schedule I"
+    },
+    "CLAIM_HIGH_PROTEIN": {
+      "claim_id": "CLAIM_HIGH_PROTEIN",
+      "aliases": ["high protein", "rich in protein", "source of protein"],
+      "type": "NUTRIENT_CONTENT",
+      "target_nutrient": "protein_g",
+      "evaluation_mode": "ANY",
+      "conditions": [
+        {"basis": "100g", "operator": ">=", "threshold": 12.0, "unit": "g per 100g"},
+        {"basis": "serving", "operator": ">=", "threshold": 12.0, "unit": "g per serving"},
+        {"basis": "energy_ratio", "nutrient_kcal_multiplier": 4, "operator": ">=", "threshold": 20.0, "unit": "% of total energy"}
+      ],
+      "regulation_ref": "FSSAI Advertising and Claims Regulations, Schedule I"
+    },
+    "CLAIM_HIGH_FIBER": {
+      "claim_id": "CLAIM_HIGH_FIBER",
+      "aliases": ["high fiber", "high fibre", "rich in dietary fiber", "source of fiber", "source of fibre"],
+      "type": "NUTRIENT_CONTENT",
+      "target_nutrient": "dietary_fiber_g",
+      "evaluation_mode": "ANY",
+      "conditions": [
+        {"basis": "100g", "operator": ">=", "threshold": 6.0}
+      ],
+      "regulation_ref": "FSSAI Advertising and Claims Regulations, Schedule I"
+    },
+    "CLAIM_NO_ADDED_SALT": {
+      "claim_id": "CLAIM_NO_ADDED_SALT",
+      "aliases": ["no added salt", "without added salt", "zero added salt", "unsalted"],
+      "type": "NON_ADDITION",
+      "forbidden_ingredients": [
+        "salt",
+        "sodium chloride",
+        "rock salt",
+        "black salt",
+        "sea salt",
+        "baking soda",
+        "sodium bicarbonate",
+        "monosodium glutamate",
+        "msg"
+      ],
+      "regulation_ref": "FSSAI Advertising and Claims Regulations, Schedule II"
+    }
+  }
+}
