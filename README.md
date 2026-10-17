@@ -1,4 +1,4 @@
-FMCG Label Auditor
+FMCG Label Auditor:
 An AI-assisted system for automated screening of FMCG nutritional labels for potential regulatory non-compliance.
 
 Problem
