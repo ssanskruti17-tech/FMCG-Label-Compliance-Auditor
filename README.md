@@ -25,7 +25,7 @@ FSSAI Regulatory Rules
 Current Prototype
 The current prototype demonstrates automated screening of product claims and ingredients, including identification of potential inconsistencies requiring regulatory review.
 
-Future Scope
+Future Scope:
 RAG-based retrieval of FSSAI regulations
 Semantic ingredient matching
 Expanded regulatory rule base
