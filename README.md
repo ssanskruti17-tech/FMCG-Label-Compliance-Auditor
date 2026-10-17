@@ -10,7 +10,7 @@ The prototype automatically:
 Processes product label images
 Extracts text using OCR
 Identifies ingredients, nutritional information and claims
-Checks extracted information against regulatory rules
+Checks extracted information against the regulatory rules
 Flags potential compliance issues with supporting evidence
 Workflow
 Product Image → OpenCV → EasyOCR → Information Extraction → Compliance Engine → Audit Result
